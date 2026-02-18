@@ -1,69 +1,69 @@
 
 
-# Landing Page — Protocolo 3C
+# Revamp Completo — Landing Page Protocolo 3C (versão premium)
 
-## Visão Geral
-Uma landing page de alta conversão no estilo **dark/agressivo**, otimizada para tráfego pago, com CTA redirecionando para checkout externo. Página longa (long-form) com todas as seções de copy fornecidas.
-
----
-
-## Estrutura da Página
-
-### 1. Hero Section
-- Fundo escuro com gradiente verde/amarelo nos destaques
-- **Headline principal**: "Faça seus primeiros R$3.000 em comissões em 14 dias..."
-- **Subtítulo** com o diferencial do sistema 3C
-- **Checkpoint do Sprint** como badge de destaque
-- **CTA primário** (botão verde vibrante) redirecionando para link externo
-- **Contador de vagas** do Lote 1 (ex: "143 de 200 vagas restantes") — valor editável manualmente no código
-
-### 2. Pilha de Valor (Value Stack)
-- 6 blocos visuais com ícones, cada um representando um item do pacote:
-  1. Sprint 14D
-  2. 2 Ofertas Prontas
-  3. Pack de Criativos Validados
-  4. Kit de Conversa WhatsApp
-  5. Console 3C (IA + automação)
-  6. Comunidade 3C
-- Cada bloco com título, descrição e bullet points
-- Visual tipo "cards empilhados" com bordas brilhantes (glow effect)
-
-### 3. Pré-requisito (Transparência)
-- Seção curta e honesta sobre o investimento recomendado em tráfego (~R$1.000)
-- Estilo discreto mas visível
-
-### 4. Garantia e Risco Reverso
-- Seção com selo/badge de garantia 14 dias
-- Texto de risco zero com destaque visual
-
-### 5. Preço e Ancoragem
-- Preço riscado de R$97 → **R$57 no Lote 1**
-- Contador de vagas restantes (mesmo do hero, repetido)
-- Menção ao Order Bump (Cofre 3C por R$37)
-- Menção ao upsell de assinatura (informativo)
-
-### 6. CTA Final
-- Repetição do botão principal com texto completo
-- Checklist visual (✅) dos itens inclusos
-- Botão grande e chamativo
-
-### 7. Footer
-- Informações legais mínimas
+## Resumo
+Reescrever toda a landing page seguindo a estrutura e copy profissional que você enviou. Objetivo: tirar qualquer promessa de dinheiro, remover order bump/upsell da página, e deixar com cara de produto sério.
 
 ---
 
-## Design & Estilo
-- **Fundo**: escuro (#0a0a0a / preto profundo)
-- **Cores de destaque**: verde neon e amarelo/dourado para CTAs e highlights
-- **Tipografia**: bold e grande nos títulos, alta legibilidade
-- **Animações**: scroll suave, glow nos cards, botão com pulse/hover
-- **Responsivo**: mobile-first (maioria do tráfego pago vem de mobile)
+## O que muda
+
+### Removido
+- Promessa "R$3.000 em comissões em 14 dias" (hero e todas as menções)
+- Contador de vagas / lote de fundador (tira urgência artificial)
+- Order bump e upsell visíveis na landing (ficam só no checkout)
+- Referências a "encapsulado", "SaaS", ofertas de nicho específico
+- Preço riscado (R$97 → R$57) — preço fica direto, limpo
+
+### Adicionado (novas seções, na ordem)
+1. **Hero** — "Protocolo 3C: seu Instagram no piloto automático" + sub + 3 bullets + CTA + microcopy ("Acesso imediato - Garantia de 14 dias - Compra segura")
+2. **O Problema** — "O que trava suas vendas nao e falta de conteudo" + texto curto
+3. **Mecanismo 3C** — 3 cards (Captura, Conversao, Checkout+Entrega) com icones e descricoes
+4. **O que voce recebe** — 5 cards com icones (mini-aula, kit mensagens, templates oferta, checklist, plano 7 dias)
+5. **Como funciona** — 3 passos numerados, visual limpo
+6. **Pra quem e / Nao e** — 2 colunas lado a lado
+7. **Oferta + CTA** — Titulo + inclui + botao
+8. **Garantia 14 dias** — Texto reescrito profissional
+9. **FAQ** — 6 perguntas com accordion (componente ja existe no projeto)
+10. **Footer** — com links Suporte, Termos, Privacidade
+
+### Ajustes de design
+- Mesma base dark/agressiva, mas CTA com texto atualizado ("Quero acessar o Protocolo 3C")
+- CTA repetido em 3 pontos: hero, oferta, pos-FAQ
+- Cards com icones simples (Lucide) para cada secao
+- FAQ usando o componente Accordion ja existente
 
 ---
 
-## Funcionalidades
-- Contador de vagas do Lote 1 (valor configurável no código)
-- Botão CTA com link externo configurável (para Hotmart/Kiwify)
-- Página 100% estática (sem backend necessário)
-- Otimizada para carregamento rápido
+## Detalhes tecnicos
 
+### Arquivo modificado
+- `src/pages/Index.tsx` — reescrita completa do conteudo e estrutura
+
+### Componentes reutilizados
+- `Accordion` / `AccordionItem` / `AccordionTrigger` / `AccordionContent` do `src/components/ui/accordion.tsx` para o FAQ
+
+### Variaveis de config mantidas
+- `CHECKOUT_URL` (link externo configuravel)
+- Removidas: `VAGAS_RESTANTES`, `VAGAS_TOTAL` (sem contador)
+
+### Estrutura do novo arquivo
+```
+Config (CHECKOUT_URL)
+CTAButton (texto atualizado + microcopy)
+Dados: faqItems[], valueItems[], steps[]
+Index component:
+  1. Hero
+  2. Problema
+  3. Mecanismo 3C
+  4. O que voce recebe
+  5. Como funciona
+  6. Pra quem e / Nao e
+  7. Oferta + CTA
+  8. Garantia
+  9. FAQ (Accordion)
+  10. Footer (Suporte | Termos | Privacidade)
+```
+
+Todo o texto segue exatamente a copy que voce forneceu, sem promessas de dinheiro, sem order bump na pagina, sem urgencia artificial.
